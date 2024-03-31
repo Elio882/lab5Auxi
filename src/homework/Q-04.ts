@@ -3,23 +3,21 @@
   /* APLICA DRY */
   
   //EX - 1
-  
+ 
   function calculateOperation1(a: number, b: number, c: number): number {
-    let sumResult = a + b;
-    let multiplicationResult = sumResult * c;
-    return multiplicationResult;
+    return (a+b)*c;
   }
-
-  function calculateOperation2(x: number, y: number, z: number): number {
-    let sumResult = x + y;
-    let multiplicationResult = sumResult * z;
-    return multiplicationResult;
-  }
+  //the function 2 does the same
 
   // EX - 2
+
   function calculateRectangleArea(length: number, width: number): number {
     return length * width;
   }
+
+  // function calculateArea(length: number, width: number, geometricFigure: String, radius: number): number{
+  //   return  geometricFigure === "cuadrado"? length * width : Math.PI * radius * radius;
+  // }
 
   function calculateCircleArea(radius: number): number {
     return Math.PI * radius * radius;
