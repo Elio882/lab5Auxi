@@ -10,17 +10,20 @@
   //the function 2 does the same
 
   // EX - 2
-
-  function calculateRectangleArea(length: number, width: number): number {
-    return length * width;
+  interface Calculate{
+    calculate(length?: number, width?:number, radius?: number): number;
   }
 
-  // function calculateArea(length: number, width: number, geometricFigure: String, radius: number): number{
-  //   return  geometricFigure === "cuadrado"? length * width : Math.PI * radius * radius;
-  // }
+  class CalculateRectangleArea implements Calculate{
+    calculate(length: number, width: number): number {
+      return  length * width;
+    }
+  }
 
-  function calculateCircleArea(radius: number): number {
-    return Math.PI * radius * radius;
+  class calculateCircleArea implements Calculate{
+    calculate(radius: number): number {
+      return Math.PI * radius * radius;
+    }
   }
 
   // EX - 3
